@@ -1,16 +1,11 @@
-# dart_counter
+# DartCounter
 
 An application to keep track of a Dart match
 
-## Getting Started
+It is currently made for Windows-only use, but you can build it for any Platform if you want,
+but due to the needed size of the application it will only work good on Desktops.
 
-This project is a starting point for a Flutter application.
+![readme_image](readme_image.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app currently supports up to 4 players, and has some statistics that may or may not work.
+It is currently available for download under the Releases tab over an msix-installer.
