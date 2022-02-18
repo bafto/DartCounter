@@ -293,7 +293,7 @@ class _StatisticsViewerState extends State<StatisticsViewer> {
                                     ),
                                   ),
                                   Flexible(
-                                    child: Text("$currentPlayer hat schon ${player.hits[20]?.tripleHits}\nmal die 180 getroffen!",
+                                    child: Text("$currentPlayer hat schon ${player.total180HIts}\nmal die 180 getroffen!",
                                         style: textStyle
                                     ),
                                   ),

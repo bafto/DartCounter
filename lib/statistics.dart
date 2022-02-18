@@ -44,8 +44,10 @@ class StatisticPlayer {
   int totalDoubleTries = 0;
   @JsonKey(defaultValue: 0)
   int totalDoubleHits = 0;
+  @JsonKey(defaultValue: 0)
+  int total180HIts = 0;
 
-  StatisticPlayer(this.hits, this.games, this.wins, this.totalLegs, this.wonLegs, this.totalSets, this.wonSets, this.totalDoubleTries, this.totalDoubleHits);
+  StatisticPlayer(this.hits, this.games, this.wins, this.totalLegs, this.wonLegs, this.totalSets, this.wonSets, this.totalDoubleTries, this.totalDoubleHits, this.total180HIts);
 
   factory StatisticPlayer.fromJson(Map<String, dynamic> json) => _$StatisticPlayerFromJson(json);
   Map<String, dynamic> toJson() => _$StatisticPlayerToJson(this);

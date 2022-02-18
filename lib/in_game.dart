@@ -58,6 +58,7 @@ class _InGameState extends State<InGame> {
   int currentSavedMove = -1;
   static const maxSavedMoves = 30;
   final _scrollController = ScrollController();
+  String winner = ""; //set if someone won
 
   @override
   void initState() {
@@ -69,7 +70,7 @@ class _InGameState extends State<InGame> {
 
   @override
   void dispose() {
-    _finishStatistics("");
+    _finishStatistics(winner);
     globals.statistics?.save();
     super.dispose();
   }
@@ -112,7 +113,11 @@ class _InGameState extends State<InGame> {
     final score = move.score.value;
 
     if(!(globals.statistics?.players.containsKey(player) ?? false)) {
-      globals.statistics?.players[player] = StatisticPlayer({}, 0, 0, 0, 0, 0, 0, 0, 0);
+      globals.statistics?.players[player] = StatisticPlayer({}, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
+    if (score.reduce((value, element) => DartBoardClickData(value: value.value + element.value, isDouble: false, isTriple: false)).value == 180) {
+      globals.statistics?.players[player]?.total180HIts++;
     }
 
     for (final _hit in score) {
@@ -310,7 +315,7 @@ class _InGameState extends State<InGame> {
   }
 
   void _onWin(String winner) {
-    _finishStatistics(winner);
+    this.winner = winner;
     Navigator.popUntil(context, (route) => route.isFirst);
     Navigator.pushReplacement(context,
       MaterialPageRoute(builder: (context) => HomeScreen(winner: winner)));

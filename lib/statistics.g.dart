@@ -34,6 +34,7 @@ StatisticPlayer _$StatisticPlayerFromJson(Map<String, dynamic> json) =>
       json['wonSets'] as int? ?? 0,
       json['totalDoubleTries'] as int? ?? 0,
       json['totalDoubleHits'] as int? ?? 0,
+      json['total180HIts'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$StatisticPlayerToJson(StatisticPlayer instance) =>
@@ -47,6 +48,7 @@ Map<String, dynamic> _$StatisticPlayerToJson(StatisticPlayer instance) =>
       'wonSets': instance.wonSets,
       'totalDoubleTries': instance.totalDoubleTries,
       'totalDoubleHits': instance.totalDoubleHits,
+      'total180HIts': instance.total180HIts,
     };
 
 Statistics _$StatisticsFromJson(Map<String, dynamic> json) => Statistics()
