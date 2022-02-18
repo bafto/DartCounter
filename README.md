@@ -9,3 +9,5 @@ but due to the needed size of the application it will only work good on Desktops
 
 The app currently supports up to 4 players, and has some statistics that may or may not work.
 It is currently available for download under the Releases tab over an msix-installer.
+
+This is my very first Flutter project, so please have mercy to me when you look at the code.
